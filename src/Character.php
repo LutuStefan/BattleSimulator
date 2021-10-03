@@ -33,10 +33,12 @@ class Character {
         return $this->status;
     }
 
-    public function setStatus(Status  $status): Character
+    /**
+     * @param Status $status
+     */
+    public function setStatus(Status  $status)
     {
         $this->status = $status;
-        return $this;
     }
 
     public function displayStatus()

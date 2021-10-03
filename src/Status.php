@@ -108,23 +108,21 @@ class Status {
         return $this->luck;
     }
 
+
     /**
      * @param float $health
-     * @return $this
      */
-    public function setHealth(float $health): Status
+    public function setHealth(float $health)
     {
         $this->health = $health;
-        return $this;
     }
 
     /**
      * @param float $strength
      */
-    public function setStrength(float $strength): Status
+    public function setStrength(float $strength)
     {
         $this->strength = $strength;
-        return $this;
     }
 
     /**
@@ -133,7 +131,6 @@ class Status {
     public function setDefence(float $defence)
     {
         $this->defence = $defence;
-        return $this;
     }
 
     /**
