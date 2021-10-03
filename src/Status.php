@@ -38,7 +38,6 @@ class Status {
     }
 
     /**
-     * @param Status $status
      * @return Status
      */
     public function copyStatus(): Status
