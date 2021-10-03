@@ -1,40 +1,14 @@
 <?php
 
-namespace App\Controller;
+namespace App\Service;
 
 use App\Beast;
-use App\Character;
-use App\GameManager;
+use App\Hero;
 use App\Skill;
 use App\SkillEffect;
-use App\Status;
-use Symfony\Component\HttpFoundation\Response;
-use App\Hero;
-use App\Turn;
 
-class BattleController
+class TurnService
 {
-    public function battle(): Response
-    {
-//        try {
-//            [$hero, $beast] = $this->initBattle();
-//
-//            $numberOfTurns = 0;
-//            while ($numberOfTurns < GameManager::MAX_NUMBER_OF_TURNS) {
-//                $turn = new Turn($hero, $beast);
-//                $turn->executeTurn();
-//                $numberOfTurns++;
-//            }
-//        } catch (\Exception $exception) {
-//            dd($exception);
-//        }
-
-
-//
-        return new Response(
-        );
-    }
-
     public static function initBattle(): array
     {
         $hero = new Hero(

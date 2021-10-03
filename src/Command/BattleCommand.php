@@ -3,8 +3,7 @@
 namespace App\Command;
 
 use App\Character;
-use App\Controller\BattleController;
-use App\GameManager;
+use App\Service\TurnService;
 use App\Turn;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -28,7 +27,7 @@ class BattleCommand extends Command
             /** @var Character $hero
              * @var  Character $beast
              */
-            [$hero, $beast] = BattleController::initBattle();
+            [$hero, $beast] = TurnService::initBattle();
             $hero->displayStatus();
             $beast->displayStatus();
 
