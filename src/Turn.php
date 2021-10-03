@@ -89,7 +89,8 @@ class Turn
                 echo PHP_EOL . $defender->getName() . ' lost!';
                 return true;
             }
-            $defender->setStatus($defender->getStatus()->setHealth($defenderHealth));
+//            $defender->setStatus($defender->getStatus()->setHealth($defenderHealth));
+            $defender->getStatus()->setHealth($defenderHealth);
 
         }
         return false;
@@ -123,8 +124,8 @@ class Turn
         if ($attackerSkill !== null) {
             /** @var Hero $attacker */
             [$attackerWithNewStatuses, $defenderWithNewStatuses] = $attacker->useSkill($attackerSkill, $defender);
-            $attacker = $attacker->setStatus($attackerWithNewStatuses);
-            $defender = $defender->setStatus($defenderWithNewStatuses);
+            $attacker->setStatus($attackerWithNewStatuses);
+            $defender->setStatus($defenderWithNewStatuses);
         }
 
         if ($defenderSkill !== null) {
